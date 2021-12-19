@@ -1,0 +1,10 @@
+SELECT * FROM books_schema.books;
+INSERT INTO books (title, number_of_pages) VALUES ('C Sharp', 400);
+INSERT INTO books (title, number_of_pages) VALUES ('Java', 310);
+INSERT INTO books (title, number_of_pages) VALUES ('Python', 200);
+INSERT INTO books (title, number_of_pages) VALUES ('PHP', 350);
+INSERT INTO books (title, number_of_pages) VALUES ('Ruby', 199);
+UPDATE books SET title = 'C#' WHERE id = 1;
+SELECT * FROM books_schema.books;
+SELECT * FROM books JOIN favorites on books.id = favorites.book_id JOIN authors on authors.id = favorites.author_id WHERE books.id = 3;
+SELECT * FROM books JOIN favorites ON books.id = favorites.book_id JOIN authors ON authors.id = favorites.author_id WHERE books.id = 5;
